@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:tugas_akhir_amd/home.dart';
+// import 'package:tugas_akhir_amd/home.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:tugas_akhir_amd/auth_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   _SplashScreen createState() => _SplashScreen();
@@ -18,7 +20,7 @@ class _SplashScreen extends State<SplashScreen> {
     return Timer(duration, () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Home()),
+        MaterialPageRoute(builder: (context) => LoginPage()),
       );
     });
   }
@@ -32,8 +34,10 @@ class _SplashScreen extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Image.asset('assets/images/amik.png', 
-            height: 200,),
+            Image.asset(
+              'assets/images/amik.png',
+              height: 200,
+            ),
             // Icon(
             //   Icons.school,
             //   size: 100.0,
@@ -42,18 +46,23 @@ class _SplashScreen extends State<SplashScreen> {
             SizedBox(
               height: 24.0,
             ),
-            Text(
-              "LMS AMIK",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 30.0,
-              ),
-            ),
+            Text("LMS AMIK",
+                style: GoogleFonts.piedra(
+                    textStyle: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 35,
+                ))
+                // TextStyle(
+                //   color: Colors.white,
+                //   fontWeight: FontWeight.bold,
+                //   fontSize: 30.0,
+                // ),
+                ),
             SizedBox(
               height: 25,
             ),
-             SpinKitRing(
+            SpinKitRing(
               color: Colors.white,
               size: 50.0,
             ),
